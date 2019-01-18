@@ -16,6 +16,7 @@ class CinriConn:
         result = requests.get(self.baseurl + 'login.php?token='
                             + self.token + '&key=' + self.key
                             + '&u=' + user + '&p=' + password)
+        return result.json()
 
     def get_user_info(self, u_name="", u_id=""):
         if(u_id != ""):
